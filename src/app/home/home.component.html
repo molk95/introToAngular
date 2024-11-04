@@ -1,5 +1,5 @@
 <p>home works!</p>
-<P>DDD</P>
+<P>interpolation</P>
 <table border="1">
     <tr *ngFor="let user of users">
       <td>{{ user.id }}</td>
@@ -8,4 +8,13 @@
     </tr>
   </table>
 
-  <input type="submit" value="save" (click)="show()">
+  <input type="submit" value="save" (click)="show()"> <br>
+
+<div [style.backgroundColor]="color">
+  <p>
+
+    property biding
+  </p>
+ 
+</div>
+<input type="text"><br>
