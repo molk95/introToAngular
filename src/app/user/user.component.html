@@ -1,0 +1,16 @@
+<p>user works!</p>
+<P>interpolation</P>
+<table border="1">
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.fullName }}</td>
+      <td>{{ user.age }}</td>
+    </tr>
+  </table>
+
+  <input type="submit" value="save" (click)="show()"> <br>
+  <input type="text" placeholder="Type your color..." [(ngModel)]="color">
+
+  <div [style.backgroundColor]="color">
+  <p>property biding</p>
+</div>

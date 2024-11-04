@@ -1,0 +1,32 @@
+<p>product works!</p>
+<table border="1">
+    <tr>
+        <td>
+            id
+        </td>
+        <td>
+           title
+        </td>
+      <td>
+        price
+      </td>
+
+        <td>
+          quantity
+        </td>
+        <td>
+           action
+        </td>
+    </tr>
+    <tr *ngFor="let p of products">
+      <td>{{ p.id }}</td>
+      <td>{{ p.title }}</td>
+      <td>{{ p.price }}</td>
+
+      <td>{{p.quantity }}</td>
+      <td>
+        <input type="button" value="buy" (click)="buy">
+      </td>
+    </tr>
+  </table>
+  <input type="text" placeholder="type price..." [(ngModel)]="price">
