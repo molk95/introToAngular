@@ -27,7 +27,14 @@ export class ProductComponent {
       quantity:8
     }
   ];
-  buy(){
-    
+
+  buy(product: any) {
+    if (product.quantity > 0) {
+      product.quantity -= 1;
+    }
+  }
+
+  filteredProducts() {
+    return this.products.filter(p => p.price >= this.price);
   }
 }

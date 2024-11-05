@@ -18,15 +18,15 @@
            action
         </td>
     </tr>
-    <tr *ngFor="let p of products">
+    <tr *ngFor="let p of filteredProducts()">
       <td>{{ p.id }}</td>
       <td>{{ p.title }}</td>
       <td>{{ p.price }}</td>
 
       <td>{{p.quantity }}</td>
       <td>
-        <input type="button" value="buy" (click)="buy">
+        <input type="button" value="buy" (click)="buy(p)">
       </td>
     </tr>
   </table>
-  <input type="text" placeholder="type price..." [(ngModel)]="price">
+  <input type="search" placeholder="type price..." [(ngModel)]="price" />
