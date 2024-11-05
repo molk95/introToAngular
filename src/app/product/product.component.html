@@ -1,32 +1,18 @@
-<p>product works!</p>
-<table border="1">
-    <tr>
-        <td>
-            id
-        </td>
-        <td>
-           title
-        </td>
-      <td>
-        price
-      </td>
 
-        <td>
-          quantity
-        </td>
-        <td>
-           action
-        </td>
-    </tr>
-    <tr *ngFor="let p of filteredProducts()">
-      <td>{{ p.id }}</td>
-      <td>{{ p.title }}</td>
-      <td>{{ p.price }}</td>
 
-      <td>{{p.quantity }}</td>
-      <td>
-        <input type="button" value="buy" (click)="buy(p)">
-      </td>
-    </tr>
-  </table>
-  <input type="search" placeholder="type price..." [(ngModel)]="price" />
+<h1 class="p-2">Products</h1>
+<div class="p-2 m-2 d-flex flex-row">
+  <div class="p-2 m-2" *ngFor="let p of filteredProducts()" class="card" style="width: 18rem;">
+    <img class="card-img-top" src={{p.img}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Title: {{ p.title }} </h5>
+      <p class="card-text">Price: {{ p.price }} </p>
+      <p class="card-text">Quantity: {{p.quantity }} </p>
+      <input class="btn btn-primary" type="button" 
+      value="buy" (click)="buy(p)">
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+</div>
+
+<input type="search" class="form-control m-3" placeholder="type price..." [(ngModel)]="price" />
