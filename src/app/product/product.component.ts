@@ -37,6 +37,12 @@ export class ProductComponent {
       product.quantity -= 1;
     }
   }
+  buyById(id: number) {
+    const product = this.products.find(p => p.id === id);
+    if (product) {
+        product.quantity--;
+    }
+}
 
   filteredProducts() {
     return this.products.filter(p => p.price >= this.price);
